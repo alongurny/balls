@@ -23,6 +23,10 @@ namespace Balls
         public MainWindow()
         {
             InitializeComponent();
+            Vector v = new Vector(3, 4);
+            Console.WriteLine(v + v);
+            Console.WriteLine(2 * v);
+            
         }
     }
 }
