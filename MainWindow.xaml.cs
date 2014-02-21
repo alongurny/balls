@@ -24,8 +24,11 @@ namespace Balls
         {
             InitializeComponent();
             Vector v = new Vector(3, 4);
+            Vector u = new Vector(3, 4);
             Console.WriteLine(v + v);
             Console.WriteLine(2 * v);
+            Console.WriteLine(v / 2);
+            Console.WriteLine(v == u);
             
         }
     }
