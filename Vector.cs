@@ -8,10 +8,9 @@ namespace Balls
 {
     public struct Vector
     {
-
         public static bool operator ==(Vector u, Vector v)
         {
-            return u.x == v.x && u.y == v.y;
+            return u.Equals(v);
         }
 
         public static bool operator !=(Vector u, Vector v)
@@ -94,6 +93,21 @@ namespace Balls
         public override string ToString()
         {
             return "Vector(" + x + ", " + y + ")";
+        }
+
+        public override bool Equals(object o)
+        {
+            if (!(o is Vector))
+            {
+                return false;
+            }
+            Vector v = (Vector)o;
+            return this.x == v.x && this.y == v.y;
+        }
+
+        public override int GetHashCode()
+        {
+            return x.GetHashCode() ^ y.GetHashCode();
         }
     }
 }

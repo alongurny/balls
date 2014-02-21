@@ -28,7 +28,7 @@ namespace Balls
             Console.WriteLine(v + v);
             Console.WriteLine(2 * v);
             Console.WriteLine(v / 2);
-            Console.WriteLine(v == u);
+            Console.WriteLine(true);
             
         }
     }
